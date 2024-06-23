@@ -1,0 +1,19 @@
+.container {
+  align-items: center;
+  padding: 16px;
+  border-top: solid 1px #9F9FA7;
+  background-color: #121317;
+  flex-direction: row;
+  display: flex;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  height: 48px;
+}
+
+.text {
+  font-size: 16px;
+  color: #434343;
+}

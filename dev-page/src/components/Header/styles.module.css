@@ -1,0 +1,32 @@
+.container {
+  align-items: center;
+  padding: 16px;
+  border-bottom: solid 1px #424242;
+  flex-direction: row;
+  display: flex;
+  flex: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #121317;
+}
+
+.title {
+  font-size: 24px;
+  color: #CECECE;
+}
+
+.separator {
+  width: 1px;
+  height: 14px;
+  background-color: #999;
+}
+
+.menuItems {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 64px;
+}

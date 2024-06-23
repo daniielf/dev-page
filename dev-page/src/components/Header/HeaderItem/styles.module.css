@@ -1,0 +1,16 @@
+.container {
+  width: 150px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.title {
+  font-size: 20px;
+  align-self: center;
+  color: #CECECE;
+}
+
+.title:hover {
+  text-decoration: underline;
+}
