@@ -21,6 +21,10 @@
     rgba(255, 255, 255, 0)
   );
 
+  --base-black: #121317;
+  --primary-gray: #9F9FA7;
+  --secondary-gray: #898989;
+
   --tile-start-rgb: 239, 245, 249;
   --tile-end-rgb: 228, 232, 233;
   --tile-border: conic-gradient(

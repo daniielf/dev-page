@@ -20,9 +20,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        {children}
+          <div style={{marginTop: 60, marginBottom: 20}}>
+            {children}
+          </div>
         <Footer />
-        </body>
+      </body>
     </html>
   );
 }

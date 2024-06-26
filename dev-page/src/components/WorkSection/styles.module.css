@@ -1,0 +1,26 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.section:not(:first-child) {
+  border-top: solid 1px var(--primary-gray);
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+}
+
+.year {
+  font-size: 18px;
+  margin: 12px;
+}
+
+.title {
+  font-size: 42;
+}
+

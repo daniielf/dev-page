@@ -1,5 +1,0 @@
-export const BASE_COLORS = {
-  BASE_BLACK: '#121317',
-  PRIMARY_GRAY: '#9F9FA7',
-  SECONDARY_GRAY: '#9F9FA7'
-}

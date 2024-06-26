@@ -9,7 +9,9 @@
   left: 0;
   width: 100%;
   justify-content: space-between;
+  position: fixed;
   background-color: #121317;
+  z-index: 99;
 }
 
 .title {
