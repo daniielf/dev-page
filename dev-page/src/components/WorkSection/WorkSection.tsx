@@ -1,33 +1,36 @@
+import { WorkSectionType } from '@/data/types';
 import styles from './styles.module.css';
+import Image from 'next/image';
 
-type Props = {
-  backgroundColor?: string;
-  title: string;
-  startDate: number;
-  endDate?: number;
-
-}
-
-export const WorkSection = ({backgroundColor, startDate, title}: Props) => {
+export const WorkSection = ({backgroundColor, fontColor,startYear, title, description, bannerURL, mainTechs}: WorkSectionType) => {
   return (
     <div className={styles.section} style={{backgroundColor}}>
-      <span className={styles.year}>
-        {startDate}
+      <span style={{color: fontColor}} className={styles.year}>
+        {startYear}
       </span>
       <div className={styles.mainContent}>
-        <h3 className={styles.title}>
-          {title}
-        </h3>
-        <span className={styles.description}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi adipisci, incidunt totam voluptatibus reiciendis explicabo earum ratione suscipit exercitationem doloremque velit, dolores dolorem tempore ut hic provident illo ipsum ea.
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi adipisci, incidunt totam voluptatibus reiciendis explicabo earum ratione suscipit exercitationem doloremque velit, dolores dolorem tempore ut hic provident illo ipsum ea.
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi adipisci, incidunt totam voluptatibus reiciendis explicabo earum ratione suscipit exercitationem doloremque velit, dolores dolorem tempore ut hic provident illo ipsum ea.
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi adipisci, incidunt totam voluptatibus reiciendis explicabo earum ratione suscipit exercitationem doloremque velit, dolores dolorem tempore ut hic provident illo ipsum ea.
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi adipisci, incidunt totam voluptatibus reiciendis explicabo earum ratione suscipit exercitationem doloremque velit, dolores dolorem tempore ut hic provident illo ipsum ea.
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi adipisci, incidunt totam voluptatibus reiciendis explicabo earum ratione suscipit exercitationem doloremque velit, dolores dolorem tempore ut hic provident illo ipsum ea.
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi adipisci, incidunt totam voluptatibus reiciendis explicabo earum ratione suscipit exercitationem doloremque velit, dolores dolorem tempore ut hic provident illo ipsum ea.
-        </span>
+        {bannerURL && 
+          <div className={styles.banner}>
+            <Image alt={`Banner of ${title}`} height={400} width={400} src={bannerURL} />
+          </div>
+        }
+        <div className={styles.textContent}>
+          <h3 style={{color: fontColor}} className={styles.title}>
+            {title}
+          </h3>
+          <span style={{color: fontColor}} className={styles.description}>
+            {description}
+          </span>
+          <div className={styles.stackContent}>
+            <span style={{color: fontColor}} className={styles.mainStackLabel}>
+              Main Stacks: 
+            </span>
+            <span style={{color: fontColor}} className={styles.mainStackValues}>
+              {' '}{mainTechs?.join('  ·  ')}
 
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   )
