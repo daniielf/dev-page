@@ -32,3 +32,13 @@
   justify-content: space-around;
   margin-right: 64px;
 }
+
+@media (max-width: 710px) {
+  .title {
+    display: none;
+  }
+
+  .container {
+    display: block;
+  }
+}

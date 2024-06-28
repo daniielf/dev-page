@@ -2,11 +2,11 @@ import { WorkSectionType } from '@/data/types';
 import styles from './styles.module.css';
 import Image from 'next/image';
 
-export const WorkSection = ({backgroundColor, fontColor,startYear, title, description, bannerURL, mainTechs}: WorkSectionType) => {
+export const WorkSection = ({backgroundColor, fontColor, workingYears, title, subtitle,descriptionTopics, bannerURL, mainTechs}: WorkSectionType) => {
   return (
-    <div className={styles.section} style={{backgroundColor}}>
+    <div id={title} className={styles.section} style={{backgroundColor}}>
       <span style={{color: fontColor}} className={styles.year}>
-        {startYear}
+        {workingYears[0]}-{workingYears[1]}
       </span>
       <div className={styles.mainContent}>
         {bannerURL && 
@@ -18,8 +18,11 @@ export const WorkSection = ({backgroundColor, fontColor,startYear, title, descri
           <h3 style={{color: fontColor}} className={styles.title}>
             {title}
           </h3>
+          <h5 style={{color: fontColor}} className={styles.subtitle}>
+            {subtitle}
+          </h5>
           <span style={{color: fontColor}} className={styles.description}>
-            {description}
+            {descriptionTopics.map((elem, index) => (<p key={`${title}_${workingYears[0]}_${index}`}>{elem}</p>))}
           </span>
           <div className={styles.stackContent}>
             <span style={{color: fontColor}} className={styles.mainStackLabel}>

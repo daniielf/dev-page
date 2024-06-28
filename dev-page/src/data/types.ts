@@ -1,7 +1,8 @@
 export type WorkSectionType = {
   title: string;
-  description: string;
-  startYear: number;
+  subtitle: string;
+  descriptionTopics: string[];
+  workingYears: number[];
   bannerURL?: string;
   backgroundColor: string;
   fontColor: string;

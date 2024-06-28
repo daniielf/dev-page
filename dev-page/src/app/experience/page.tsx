@@ -1,58 +1,17 @@
 import { WorkSection } from "@/components/WorkSection/WorkSection";
 import { WorkSectionType } from "@/data/types";
+import { MOCKED_EXPERIENCES } from "@/services/mocked-data/jobs";
 
 export default function Experience() {
-  const workExperiences: WorkSectionType[] = [
-    {
-      title: 'Easystem',
-      backgroundColor: '#FFF',
-      fontColor: '#000',
-      description: 'Worked at Easystem',
-      startYear: 2017,
-      mainTechs: ["Angular", "Ionic", "Swift", "iOS"]
-    },
-    {
-      title: 'Wize',
-      backgroundColor: '#00AA77',
-      fontColor: '#FFF',
-      description: 'Worked at Wize',
-      startYear: 2018,
-      mainTechs: []
-    },
-    {
-      title: 'IBM',
-      backgroundColor: '#FFF',
-      fontColor: '#000',
-      description: 'Worked at IBM',
-      startYear: 2019,
-      mainTechs: []
-    },
-    {
-      title: 'Avenue Code',
-      backgroundColor: '#000',
-      fontColor: '#FFF',
-      description: 'Worked at Avenue Code',
-      startYear: 2021,
-      mainTechs: []
-    },
-    {
-      title: 'Grover',
-      backgroundColor: '#F44',
-      fontColor: '#FFF',
-      description: 'Worked at Grover',
-      startYear: 2022,
-      mainTechs: []
-    },
-  ].sort((a,b) => b.startYear-a.startYear);
-
+  const workExperiences: WorkSectionType[] = MOCKED_EXPERIENCES.sort((a,b) => b.workingYears[0]-a.workingYears[0]);
+  
   return (
     <div style={{paddingBottom: 30}}>
       {
         workExperiences.map((experience, index) => (
-            <WorkSection  key={`${index}_${experience.startYear}`} {...experience}  />
+          <WorkSection key={`${index}_${experience.workingYears[0]}`} {...experience}  />
         ))
       }
-
     </div>
   )
 }
