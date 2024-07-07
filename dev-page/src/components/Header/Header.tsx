@@ -8,7 +8,7 @@ export const Header = () => {
     </span>
     <div className={styles.menuItems}>
       { 
-        ["Home", "Experience","Projects"].map((elem, index) => {
+        ["Home", "Experiences","Projects"].map((elem, index) => {
           return (
             <>
               {index !== 0 && <div className={styles.separator}></div>}
