@@ -1,0 +1,14 @@
+type Query {
+  experiences: [Experience!]!
+}
+
+type Experience {
+  id: ID!
+  title: String!
+  subtitle: String!
+  descriptionTopics: [String!]!
+  backgroundColor: String
+  fontColor: String
+  mainTechs: [String!]!
+  workingYears: [Int!]
+}
