@@ -1,7 +1,24 @@
+"""
+ Queries
+"""
+
 type Query {
   experiences: [Experience!]!
+  techs: [Tech]
 }
 
+"""
+ Mutations
+"""
+type Mutation {
+  addExperience(experience: ExperienceInput): Experience
+  addTech(tech: TechInput): Tech
+}
+
+
+"""
+ Entities
+"""
 type Experience {
   id: ID!
   title: String!
@@ -11,4 +28,23 @@ type Experience {
   fontColor: String
   mainTechs: [String!]!
   workingYears: [Int!]
+}
+
+type Tech {
+  id: ID!
+  title: String!
+}
+
+input ExperienceInput {
+  title: String!
+  subtitle: String!
+  descriptionTopics: [String!]!
+  backgroundColor: String
+  fontColor: String
+  mainTechs: [String!]!
+  workingYears: [Int!]
+}
+
+input TechInput {
+  title: String!
 }
