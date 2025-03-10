@@ -5,6 +5,7 @@ export type WorkSectionType = {
   workingYears: number[];
   bannerURL?: string;
   backgroundColor: string;
+  bannerColor: string;
   fontColor: string;
   mainTechs?: string[];
 }

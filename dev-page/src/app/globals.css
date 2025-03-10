@@ -4,7 +4,6 @@
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-
   --foreground-rgb: 0, 0, 0;
   background-color: #121317;
 
@@ -111,4 +110,8 @@ a {
 html, body {
   height: 100%;
   margin: 0;
+}
+
+p, h1, h2, h3, h4, span {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }

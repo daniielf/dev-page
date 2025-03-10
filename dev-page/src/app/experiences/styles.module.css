@@ -1,0 +1,14 @@
+.main {
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 4%;
+    padding-bottom: 10%;
+}
+
+.sectionsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    border-end-end-radius: 12px;
+    border-end-start-radius: 12px;
+    overflow: hidden;
+}
